@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Blues">
+	<jta-data-source>java:jboss/datasources/bestTraderDS</jta-data-source>
+		<class>tn.esprit.Blues.entities.Customer</class>
+		<class>tn.esprit.Blues.entities.Administrator</class>
+		<class>tn.esprit.Blues.entities.Bond</class>
+		<class>tn.esprit.Blues.entities.Share</class>
+		<class>tn.esprit.Blues.entities.Bank</class>
+		<class>projetTest.Article</class>
+		<class>projetTest.Company</class>
+		<class>projetTest.Currency</class>
+		<class>projetTest.Currencybank</class>
+		<class>projetTest.Indexmarket</class>
+		<class>projetTest.Operation</class>
+		<class>projetTest.Paircurrency</class>
+		<class>projetTest.Pairhistory</class>
+		<class>projetTest.Portfolio</class>
+		<class>projetTest.Pricehistory</class>
+		<class>projetTest.Quotation</class>
+		<class>projetTest.Sector</class>
+		<class>projetTest.User</class>
+		<properties>
+		<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+		<property name="hibernate.show_sql" value="true"/>
+		<property name="hibernate.format_sql" value="true"/>
+		
+		</properties>
+	</persistence-unit>
+</persistence>
