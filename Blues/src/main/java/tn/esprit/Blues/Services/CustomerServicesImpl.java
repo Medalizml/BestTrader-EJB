@@ -2,6 +2,7 @@ package tn.esprit.Blues.Services;
 
 
 import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -36,6 +37,7 @@ public class CustomerServicesImpl implements CustomerServices{
 		
 	}
 
+@SuppressWarnings("unchecked")
 @Override
 public List<Customer> findAll() {
 	Query query = manager.createQuery("SELECT u FROM user u");
