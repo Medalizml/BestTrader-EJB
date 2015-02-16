@@ -12,7 +12,7 @@ import tn.esprit.Blues.entities.User;
  *
  */
 @Entity
-@DiscriminatorValue(value="administrator")
+@DiscriminatorValue(value="admin")
 public class Administrator extends User implements Serializable {
 
 	
