@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Blues">
+	<jta-data-source>java:jboss/datasources/bestTraderDS</jta-data-source>
+		<class>tn.esprit.Blues.entities.Customer</class>
+		<class>tn.esprit.Blues.entities.Administrator</class>
+		<class>tn.esprit.Blues.entities.Bond</class>
+		<class>tn.esprit.Blues.entities.Share</class>
+		<class>tn.esprit.Blues.entities.Bank</class>
+		<class>tn.esprit.Blues.entities.Article</class>
+		<class>tn.esprit.Blues.entities.Company</class>
+		<class>tn.esprit.Blues.entities.Currency</class>
+		<class>tn.esprit.Blues.entities.Currencybank</class>
+		<class>tn.esprit.Blues.entities.Indexmarket</class>
+		<class>tn.esprit.Blues.entities.Operation</class>
+		<class>tn.esprit.Blues.entities.Paircurrency</class>
+		<class>tn.esprit.Blues.entities.Pairhistory</class>
+		<class>tn.esprit.Blues.entities.Portfolio</class>
+		<class>tn.esprit.Blues.entities.Pricehistory</class>
+		<class>tn.esprit.Blues.entities.Quotation</class>
+		<class>tn.esprit.Blues.entities.Sector</class>
+		<class>tn.esprit.Blues.entities.User</class>
+		<properties>
+		<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+		<property name="hibernate.show_sql" value="true"/>
+		<property name="hibernate.format_sql" value="true"/>
+		
+		</properties>
+	</persistence-unit>
+</persistence>
