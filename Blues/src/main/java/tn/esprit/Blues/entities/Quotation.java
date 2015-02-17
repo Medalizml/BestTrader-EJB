@@ -21,6 +21,7 @@ public class Quotation implements Serializable {
 	private float highestPrice;
 	private float lowestPrice;
 	private float opningPrice;
+	private float estimation;
 
 	private List<Operation> operations;
 	private List<Pricehistory> pricehistories;
@@ -96,6 +97,14 @@ public class Quotation implements Serializable {
 
 	public void setCompany(Company company) {
 		this.company = company;
+	}
+
+	public float getEstimation() {
+		return estimation;
+	}
+
+	public void setEstimation(float estimation) {
+		this.estimation = estimation;
 	}
 
 }
