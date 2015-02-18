@@ -9,7 +9,6 @@ import javax.persistence.*;
  * 
  */
 @Entity
-@NamedQuery(name = "Indexmarket.findAll", query = "SELECT i FROM Indexmarket i")
 public class Indexmarket implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;

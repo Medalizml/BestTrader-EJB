@@ -2,8 +2,10 @@ package tn.esprit.Blues.Services;
 
 import java.util.List;
 
-import tn.esprit.Blues.entities.Bond;
+import javax.ejb.Remote;
 
+import tn.esprit.Blues.entities.Bond;
+@Remote
 public interface BondServices {
 	public void add(Bond b);
 

@@ -6,10 +6,6 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-
-
-
-//import tn.esprit.Blues.entities.Quotation;
 import tn.esprit.Blues.entities.Share;
 /**
  * 
@@ -53,6 +49,18 @@ public class SharesServicesImpl implements SharesServices {
 		return query.getResultList();
 		
 	}
-	
+
+	@Override
+	public void setEstimation(Share s,Float e) {
+		Query query = manager.createQuery("UPDATE Share SET estimation = '"+e+"'"+ "WHERE id = '"+s.getId()+"'");
+		query.executeUpdate();
+		
+	}
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Share> Sharestab() {
+		Query query = manager.createQuery("SELECT DISTINCT p FROM Quotation p WHERE p.Company IS NOT EMPTY");
+		return query.getResultList();
+	}
 
 }

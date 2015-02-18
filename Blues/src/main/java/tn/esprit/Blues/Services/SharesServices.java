@@ -12,7 +12,12 @@ public interface SharesServices {
 	public Share findById(int id);
 
 	public void update(Share s);
+	
+	public void setEstimation(Share s,Float e);
 
 	public List<Share> findAll();
+	
+	
+	public List<Share> Sharestab();
 
 }

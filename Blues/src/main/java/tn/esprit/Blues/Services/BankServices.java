@@ -2,8 +2,10 @@ package tn.esprit.Blues.Services;
 
 import java.util.List;
 
-import tn.esprit.Blues.entities.Bank;
+import javax.ejb.Remote;
 
+import tn.esprit.Blues.entities.Bank;
+@Remote
 public interface BankServices {
 	public void add(Bank b);
 
