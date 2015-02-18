@@ -16,5 +16,6 @@ public interface ArticleServices {
 	public Article findById(int id);
 	public void update(Article a);
 	public List<Article> findAll();
+	public Article lastOne();
 
 }
