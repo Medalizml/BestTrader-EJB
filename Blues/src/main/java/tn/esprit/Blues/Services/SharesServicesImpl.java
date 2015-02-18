@@ -5,10 +5,11 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-//import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+import javax.persistence.Query;
 
-import tn.esprit.Blues.entities.Quotation;
+
+
+//import tn.esprit.Blues.entities.Quotation;
 import tn.esprit.Blues.entities.Share;
 /**
  * 
@@ -43,12 +44,14 @@ public class SharesServicesImpl implements SharesServices {
 
 	}
 
+
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<Quotation> findAll() {
+	public List<Share> findAll() {
 		//Query query = manager.createQuery("SELECT c.name, c.logo, q.closingPrice, q.estimation FROM quotation q inner join company c on c.id=q.company_id");
-		TypedQuery<Quotation> query = manager.createQuery("select s from quotation s",
-				Quotation.class);
+		Query query = manager.createQuery("SELECT s FROM Share s");
 		return query.getResultList();
+		
 	}
 	
 

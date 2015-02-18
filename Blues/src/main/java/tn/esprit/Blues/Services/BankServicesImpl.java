@@ -44,7 +44,7 @@ public class BankServicesImpl implements BankServices {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Bank> findAll() {
-		Query query = manager.createQuery("SELECT u FROM company u");
+		Query query = manager.createQuery("SELECT u FROM Bank u");
 		return query.getResultList();
 	}
 

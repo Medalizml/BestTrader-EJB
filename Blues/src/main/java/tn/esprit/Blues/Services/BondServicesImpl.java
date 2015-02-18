@@ -43,7 +43,7 @@ public class BondServicesImpl implements BondServices {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Bond> findAll() {
-		Query query = manager.createQuery("SELECT u FROM quotation u");
+		Query query = manager.createQuery("SELECT u FROM Band u");
 		return query.getResultList();
 	}
 

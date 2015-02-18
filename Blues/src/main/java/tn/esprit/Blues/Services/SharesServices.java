@@ -1,10 +1,9 @@
 package tn.esprit.Blues.Services;
 
 import java.util.List;
-
-import tn.esprit.Blues.entities.Quotation;
+import javax.ejb.Remote;
 import tn.esprit.Blues.entities.Share;
-
+@Remote
 public interface SharesServices {
 	public void add(Share s);
 
@@ -14,6 +13,6 @@ public interface SharesServices {
 
 	public void update(Share s);
 
-	public List<Quotation> findAll();
+	public List<Share> findAll();
 
 }
