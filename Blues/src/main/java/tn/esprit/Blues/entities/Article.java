@@ -1,7 +1,9 @@
 package tn.esprit.Blues.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import java.util.Date;
 
 
@@ -23,6 +25,13 @@ public class Article implements Serializable {
 	private Administrator administrator;
 
 	public Article() {
+	}
+
+
+	public Article(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
 	}
 
 
