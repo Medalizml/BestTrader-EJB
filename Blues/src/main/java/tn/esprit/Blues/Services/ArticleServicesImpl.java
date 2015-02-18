@@ -45,6 +45,23 @@ public class ArticleServicesImpl implements ArticleServices {
 		return query.getResultList();
 
 	}
+
+	@Override
+	public Article lastOne() {
+		
+		Query query = manager.createQuery("SELECT u.id FROM Article u");
+		List<Integer> l = query.getResultList();
+		Integer max=0;
+		for (Integer integer : l) {
+			
+			if (integer>max)
+				max=integer;
+			
+		}
+		System.out.println(max);
+		return findById(max);
+	
+	}
 	
 	
 
