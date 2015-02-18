@@ -3,25 +3,29 @@ package tn.esprit.Blues.Services;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
+import javax.persistence.Query;
 
 import tn.esprit.Blues.entities.Operation;
 
+@Stateless
+
 public class OperationServices implements OperationServicesInterface {
-	
-	
 	@PersistenceContext(name="Blues")
 	EntityManager em;
-
+	
+	
+	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Operation> afficherOperation() {
-		 TypedQuery<Operation> query =
-				    em.createQuery("SELECT o FROM operation o", Operation.class);
-				  List<Operation> results = (List<Operation>)query.getResultList();
-		return null;
+		Query query = em.createQuery("SELECT o FROM Operation o");
+		return query.getResultList();
 	}
+	
+	
 	
 
 	
