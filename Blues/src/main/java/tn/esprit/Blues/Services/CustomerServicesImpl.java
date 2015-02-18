@@ -42,9 +42,9 @@ public class CustomerServicesImpl implements CustomerServices{
 @SuppressWarnings("unchecked")
 @Override
 public List<Customer> findAll() {
-	Query query = manager.createQuery("SELECT u FROM Customer u");
+Query query = manager.createQuery("SELECT u FROM Customer u ");
 	return query.getResultList();
 }
-	
+
 
 }
