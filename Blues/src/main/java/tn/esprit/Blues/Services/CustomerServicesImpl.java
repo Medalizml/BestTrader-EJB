@@ -8,10 +8,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-
-
-
-
 import tn.esprit.Blues.entities.Customer;
 import tn.esprit.Blues.entities.Portfolio;
 
