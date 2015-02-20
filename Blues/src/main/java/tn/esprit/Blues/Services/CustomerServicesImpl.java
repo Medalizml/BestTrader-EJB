@@ -9,7 +9,11 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 
+
+
+
 import tn.esprit.Blues.entities.Customer;
+import tn.esprit.Blues.entities.Portfolio;
 
 @Stateless
 
@@ -17,8 +21,11 @@ public class CustomerServicesImpl implements CustomerServices{
 	@PersistenceContext(name="Blues")
 	EntityManager manager;
 	@Override
-	public void add(Customer c) {
+	public void add(Customer c, Portfolio p) {
 		manager.persist(c);
+		manager.persist(p);
+		
+		
 		
 	}
 	
@@ -44,6 +51,8 @@ public List<Customer> findAll() {
 	Query query = manager.createQuery("SELECT u FROM Customer u  ");
 	return query.getResultList();
 }
+
+
 
 
 }

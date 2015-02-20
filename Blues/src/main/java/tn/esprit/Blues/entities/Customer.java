@@ -19,6 +19,8 @@ import tn.esprit.Blues.entities.User;
 public class Customer extends User implements Serializable {
 
 	
+	
+
 	private String job;
 	private String nationality;
 	private Integer phoneNumber;
@@ -29,7 +31,7 @@ public class Customer extends User implements Serializable {
 	private Portfolio portfolio;
 	
 
-		@OneToOne(mappedBy="customer")
+		@OneToOne(mappedBy="customer",cascade=CascadeType.REMOVE)
 		public Portfolio getPortfolio() {
 			return this.portfolio;
 		}

@@ -12,7 +12,8 @@ import java.util.List;
 public class Portfolio implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
-	private float capital;
+	private float value;
+	private int sharesNumber;
 
 	private List<Operation> operations;
 	private Customer customer;
@@ -30,12 +31,20 @@ public class Portfolio implements Serializable {
 		this.id = id;
 	}
 
-	public float getCapital() {
-		return this.capital;
+	public float getValue() {
+		return value;
 	}
 
-	public void setCapital(float capital) {
-		this.capital = capital;
+	public void setValue(float value) {
+		this.value = value;
+	}
+
+	public int getSharesNumber() {
+		return sharesNumber;
+	}
+
+	public void setSharesNumber(int sharesNumber) {
+		this.sharesNumber = sharesNumber;
 	}
 
 	@OneToMany(mappedBy = "portfolio")
