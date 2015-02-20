@@ -23,7 +23,7 @@ public class ArticleServicesImpl implements ArticleServices {
 
 	@Override
 	public void remove(Article a) {
-		manager.remove(a);
+		manager.remove(findById(a.getId()));;
 		
 	}
 

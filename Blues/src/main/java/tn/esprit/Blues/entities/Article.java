@@ -15,7 +15,7 @@ import java.util.Date;
 
 public class Article implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private int id;
+	private Integer id;
 	private String author;
 	private Date date;
 	private String name;
@@ -37,7 +37,7 @@ public class Article implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	public int getId() {
+	public Integer getId() {
 		return this.id;
 	}
 
