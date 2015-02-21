@@ -11,15 +11,15 @@ import tn.esprit.Blues.entities.Portfolio;
 public class PortfolioServicesImp implements PortfolioServices{
 	
 	@PersistenceContext(name="Blues")
-	EntityManager manager;
+	EntityManager manage;
 	
 	public void updatePortfolio(Portfolio p){
-		manager.merge(p);
+		manage.merge(p);
 	}
 
 	@Override
 	public Portfolio findById(int id) {
-		return manager.find(Portfolio.class,id);
+		return manage.find(Portfolio.class,id);
 		
 	}
 
