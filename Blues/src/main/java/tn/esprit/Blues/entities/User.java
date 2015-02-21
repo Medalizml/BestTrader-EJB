@@ -15,6 +15,8 @@ import javax.persistence.*;
 @DiscriminatorColumn(name = "role")
 public class User implements Serializable {
 
+	
+
 	private static final long serialVersionUID = 1L;
 
 	private int id;
