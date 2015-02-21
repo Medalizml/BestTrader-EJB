@@ -42,4 +42,11 @@ public class CurrencybankServicesImpl implements CurrencybankServices{
 		return query.getResultList();
 	}
 
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Currencybank> findByid(int i) {
+		Query query = manager.createQuery("SELECT c FROM Currencybank c WHERE c.bank.id = '"+i+"'");
+		return query.getResultList();
+	}
+
 }

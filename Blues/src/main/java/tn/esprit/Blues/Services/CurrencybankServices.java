@@ -14,5 +14,6 @@ public interface CurrencybankServices {
 	public Currencybank findById(int id);
 	public void update(Currencybank c);
 	public List<Currencybank> findAll();
+	public List<Currencybank> findByid(int i);
 
 }
