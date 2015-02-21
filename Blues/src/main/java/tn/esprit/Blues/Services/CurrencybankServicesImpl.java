@@ -7,38 +7,39 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import tn.esprit.Blues.entities.Company;
+import tn.esprit.Blues.entities.Currencybank;
 @Stateless
-public class CompanyServicesImpl implements CompanyServices {
+public class CurrencybankServicesImpl implements CurrencybankServices{
 	@PersistenceContext(name="Blues")
 	EntityManager manager;
 	@Override
-	public void add(Company c) {
+	public void add(Currencybank c) {
 		manager.persist(c);
 		
 	}
 
 	@Override
-	public void remove(Company c) {
+	public void remove(Currencybank c) {
 		manager.remove(findById(c.getId()));
 		
 	}
 
 	@Override
-	public Company findById(int id) {
-		return manager.find(Company.class,id);
+	public Currencybank findById(int id) {
+		return manager.find(Currencybank.class,id);
 	}
 
 	@Override
-	public void update(Company c) {
+	public void update(Currencybank c) {
 		manager.merge(c);
 		
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Company> findAll() {
-		Query query = manager.createQuery("SELECT c FROM Company c ");
+	public List<Currencybank> findAll() {
+		Query query = manager.createQuery("SELECT c FROM Currencybank c ");
 		return query.getResultList();
 	}
+
 }

@@ -1,7 +1,11 @@
 package tn.esprit.Blues.Services;
 
+import java.util.HashMap;
 import java.util.List;
+
 import javax.ejb.Remote;
+
+import tn.esprit.Blues.entities.Company;
 import tn.esprit.Blues.entities.Share;
 @Remote
 public interface SharesServices {
@@ -18,6 +22,6 @@ public interface SharesServices {
 	public List<Share> findAll();
 	
 	
-	public List<Share> Sharestab();
+	public List<Company> Sharestab();
 
 }

@@ -6,6 +6,8 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
+import tn.esprit.Blues.entities.Company;
 import tn.esprit.Blues.entities.Share;
 /**
  * 
@@ -58,8 +60,15 @@ public class SharesServicesImpl implements SharesServices {
 	}
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Share> Sharestab() {
-		Query query = manager.createQuery("SELECT DISTINCT p FROM Quotation p WHERE p.Company IS NOT EMPTY");
+	public List<Company> Sharestab() {
+		/*int id=10;
+		Query query = manager.createQuery("SELECT s.company FROM Share s where s.id=:id ");
+		query.setParameter("id",id);
+		Company c=(Company)query.getSingleResult();
+		Query q2=manager.createQuery("SELECT c FROM Company c WHERE c.id=:idc");
+		q2.setParameter("idc",c.getId());
+		return (Company)q2.getSingleResult();*/
+		Query query = manager.createQuery("SELECT q.company FROM Quotation q");
 		return query.getResultList();
 	}
 

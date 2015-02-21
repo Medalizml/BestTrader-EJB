@@ -81,7 +81,7 @@ public class Quotation implements Serializable {
 		this.operations = operations;
 	}
 
-	@OneToMany(mappedBy = "quotation")
+	@OneToMany(mappedBy = "quotation", fetch=FetchType.EAGER)
 	public List<Pricehistory> getPricehistories() {
 		return this.pricehistories;
 	}
