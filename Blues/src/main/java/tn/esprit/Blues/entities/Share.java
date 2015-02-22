@@ -1,7 +1,9 @@
 package tn.esprit.Blues.entities;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
+
 import tn.esprit.Blues.entities.Quotation;
 
 /**
@@ -9,7 +11,7 @@ import tn.esprit.Blues.entities.Quotation;
  *
  */
 @Entity
-
+@DiscriminatorValue(value="share")
 public class Share extends Quotation implements Serializable {
 
 	

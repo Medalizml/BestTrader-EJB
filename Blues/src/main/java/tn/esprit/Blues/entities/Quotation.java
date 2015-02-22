@@ -81,7 +81,7 @@ public class Quotation implements Serializable {
 		this.operations = operations;
 	}
 
-	@OneToMany(mappedBy = "quotation",fetch=FetchType.EAGER)
+	@OneToMany(mappedBy = "quotation")
 	public List<Pricehistory> getPricehistories() {
 		return this.pricehistories;
 	}
@@ -107,13 +107,7 @@ public class Quotation implements Serializable {
 		this.estimation = estimation;
 	}
 
-	@Override
-	public String toString() {
-		return "Quotation [id=" + id + ", closingPrice=" + closingPrice
-				+ ", highestPrice=" + highestPrice + ", lowestPrice="
-				+ lowestPrice + ", opningPrice=" + opningPrice
-				+ ", estimation=" + estimation + "]";
-	}
+
 	
 	
 
