@@ -1,10 +1,6 @@
 package tn.esprit.Blues.Services;
 
 
-
-
-import java.util.List;
-
 import javax.ejb.Stateless;
 
 
@@ -38,7 +34,6 @@ public class LoginService implements ILoginRemote {
 	@Override
 	public Administrator authentification(String email, String password) {
 		// TODO Auto-generated method stub
-		Administrator admin = new Administrator();
 		String query = String.format("select u from Administrator u where u.email = '%s' and u.password = '%s'", email, password);
 		System.out.println("B");
 		Administrator admins = (Administrator) em.createQuery(query).getSingleResult();
