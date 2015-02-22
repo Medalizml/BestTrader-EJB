@@ -1,8 +1,12 @@
 package tn.esprit.Blues.entities;
 
+import java.awt.List;
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
+
+
+
 
 
 
@@ -24,8 +28,16 @@ public class Customer extends User implements Serializable {
 	private Integer phoneNumber;
 	private String address;
 	private String profilePicture;
-	private static final long serialVersionUID = 1L;
+	 
 	
+	 
+	
+	 
+	 
+	 private static final long serialVersionUID = 1L;
+	 
+
+
 	private Portfolio portfolio;
 	
 
@@ -75,6 +87,13 @@ public class Customer extends User implements Serializable {
 
 	public void setProfilePicture(String profilePicture) {
 		this.profilePicture = profilePicture;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [getId()=" + getId() + ", getEmail()=" + getEmail()
+				+ ", getFirstName()=" + getFirstName() + ", getLastName()="
+				+ getLastName() ;
 	}
    
 }

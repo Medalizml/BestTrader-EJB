@@ -18,5 +18,11 @@ public class Share extends Quotation implements Serializable {
 	public Share() {
 		super();
 	}
+
+	@Override
+	public String toString() {
+		return "Share [getId()=" + getId() + ", getClosingPrice()="
+				+ getClosingPrice() ;
+	}
    
 }
