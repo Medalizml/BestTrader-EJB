@@ -15,6 +15,8 @@ import javax.persistence.*;
 @DiscriminatorColumn(name = "role")
 public class User implements Serializable {
 
+	
+
 	private static final long serialVersionUID = 1L;
 
 	private int id;
@@ -68,6 +70,13 @@ public class User implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", email=" + email + ", firstName="
+				+ firstName + ", lastName=" + lastName + ", password="
+				+ password + "]";
 	}
 
 }

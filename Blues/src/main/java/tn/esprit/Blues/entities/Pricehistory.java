@@ -56,4 +56,9 @@ public class Pricehistory implements Serializable {
 		this.quotation = quotation;
 	}
 
+	@Override
+	public String toString() {
+		return "Pricehistory [id=" + id + ", price=" + price + "]";
+	}
+	
 }

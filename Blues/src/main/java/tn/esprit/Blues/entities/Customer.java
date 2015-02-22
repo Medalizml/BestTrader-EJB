@@ -1,8 +1,12 @@
 package tn.esprit.Blues.entities;
 
+import java.awt.List;
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
+
+
+
 
 
 
@@ -19,17 +23,27 @@ import tn.esprit.Blues.entities.User;
 public class Customer extends User implements Serializable {
 
 	
+	
+
 	private String job;
 	private String nationality;
 	private Integer phoneNumber;
 	private String address;
 	private String profilePicture;
-	private static final long serialVersionUID = 1L;
+	 
 	
+	 
+	
+	 
+	 
+	 private static final long serialVersionUID = 1L;
+	 
+
+
 	private Portfolio portfolio;
 	
 
-		@OneToOne(mappedBy="customer")
+		@OneToOne(mappedBy="customer",cascade=CascadeType.REMOVE)
 		public Portfolio getPortfolio() {
 			return this.portfolio;
 		}
@@ -75,6 +89,13 @@ public class Customer extends User implements Serializable {
 
 	public void setProfilePicture(String profilePicture) {
 		this.profilePicture = profilePicture;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [getId()=" + getId() + ", getEmail()=" + getEmail()
+				+ ", getFirstName()=" + getFirstName() + ", getLastName()="
+				+ getLastName() ;
 	}
    
 }

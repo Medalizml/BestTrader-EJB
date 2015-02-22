@@ -41,5 +41,4 @@ public class CompanyServicesImpl implements CompanyServices {
 		Query query = manager.createQuery("SELECT c FROM Company c ");
 		return query.getResultList();
 	}
-
 }

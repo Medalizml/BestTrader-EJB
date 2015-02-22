@@ -15,6 +15,7 @@ public class Paircurrency implements Serializable {
 	private int id;
 	private String name;
 	private float estimation;
+	private float closingPrice;
 	private List<Pairhistory> pairhistories;
 
 	public Paircurrency() {
@@ -53,6 +54,14 @@ public class Paircurrency implements Serializable {
 
 	public void setEstimation(float estimation) {
 		this.estimation = estimation;
+	}
+
+	public float getClosingPrice() {
+		return closingPrice;
+	}
+
+	public void setClosingPrice(float closingPrice) {
+		this.closingPrice = closingPrice;
 	}
 
 }

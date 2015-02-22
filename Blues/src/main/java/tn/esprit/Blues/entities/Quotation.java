@@ -109,4 +109,8 @@ public class Quotation implements Serializable {
 		this.estimation = estimation;
 	}
 
+
+	
+	
+
 }

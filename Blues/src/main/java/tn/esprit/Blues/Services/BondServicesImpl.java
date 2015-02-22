@@ -43,8 +43,14 @@ public class BondServicesImpl implements BondServices {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Bond> findAll() {
-		Query query = manager.createQuery("SELECT u FROM Band u");
+		Query query = manager.createQuery("SELECT u FROM Bond u");
 		return query.getResultList();
+	}
+	@Override
+	public void setEstimation(Bond s,Float e) {
+		Query query = manager.createQuery("UPDATE Bond SET estimation = '"+e+"'"+ "WHERE id = '"+s.getId()+"'");
+		query.executeUpdate();
+		
 	}
 
 }

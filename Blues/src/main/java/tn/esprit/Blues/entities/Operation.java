@@ -76,4 +76,11 @@ public class Operation implements Serializable {
 		this.portfolio = portfolio;
 	}
 
+	@Override
+	public String toString() {
+		return "Operation [id=" + id + ", numberShares=" + numberShares + "]";
+	}
+	
+	
+	
 }

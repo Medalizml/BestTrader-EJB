@@ -61,6 +61,7 @@ public class SharesServicesImpl implements SharesServices {
 	@Override
 	public List<Company> Sharestab() {
 		Query query = manager.createQuery("SELECT Company (c) FROM Quotation c WHERE c.Share IS NOT EMPTY");
+	
 		return query.getResultList();
 	}
 	

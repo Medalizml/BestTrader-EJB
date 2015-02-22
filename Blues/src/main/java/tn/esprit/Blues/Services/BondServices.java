@@ -16,5 +16,5 @@ public interface BondServices {
 	public void update(Bond b);
 
 	public List<Bond> findAll();
-
+	public void setEstimation(Bond s,Float e);
 }

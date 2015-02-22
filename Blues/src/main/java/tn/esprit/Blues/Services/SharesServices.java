@@ -1,5 +1,6 @@
 package tn.esprit.Blues.Services;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.ejb.Remote;
