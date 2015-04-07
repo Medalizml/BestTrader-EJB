@@ -1,3 +1,4 @@
+
 package tn.esprit.Blues.entities;
 
 import java.io.Serializable;
@@ -24,6 +25,7 @@ public class Quotation implements Serializable {
 	private float estimation;
 
 	private List<Operation> operations;
+	
 	private List<Pricehistory> pricehistories;
 	private Company company;
 
@@ -72,7 +74,7 @@ public class Quotation implements Serializable {
 		this.opningPrice = opningPrice;
 	}
 
-	@OneToMany(mappedBy = "quotation")
+	@OneToMany(mappedBy = "quotation",cascade=CascadeType.REMOVE)
 	public List<Operation> getOperations() {
 		return this.operations;
 	}
@@ -81,7 +83,7 @@ public class Quotation implements Serializable {
 		this.operations = operations;
 	}
 
-	@OneToMany(mappedBy = "quotation")
+	@OneToMany(mappedBy = "quotation",cascade=CascadeType.REMOVE)
 	public List<Pricehistory> getPricehistories() {
 		return this.pricehistories;
 	}

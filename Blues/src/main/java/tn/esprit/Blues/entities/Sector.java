@@ -71,4 +71,11 @@ public class Sector implements Serializable {
 		this.indexmarket = indexmarket;
 	}
 
+	@Override
+	public String toString() {
+		return "Sector [id=" + id + ", name=" + name + ","
+				 + ", indexmarket=" + indexmarket + "]";
+	}
+	
+
 }

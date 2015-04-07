@@ -1,3 +1,4 @@
+
 package tn.esprit.Blues.entities;
 
 import java.io.Serializable;

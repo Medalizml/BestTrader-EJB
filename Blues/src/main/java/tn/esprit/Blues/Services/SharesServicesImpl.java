@@ -58,18 +58,12 @@ public class SharesServicesImpl implements SharesServices {
 		query.executeUpdate();
 		
 	}
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Company> Sharestab() {
-		/*int id=10;
-		Query query = manager.createQuery("SELECT s.company FROM Share s where s.id=:id ");
-		query.setParameter("id",id);
-		Company c=(Company)query.getSingleResult();
-		Query q2=manager.createQuery("SELECT c FROM Company c WHERE c.id=:idc");
-		q2.setParameter("idc",c.getId());
-		return (Company)q2.getSingleResult();*/
-		Query query = manager.createQuery("SELECT q.company FROM Quotation q");
+		Query query = manager.createQuery("SELECT Company (c) FROM Quotation c WHERE c.Share IS NOT EMPTY");
+	
 		return query.getResultList();
 	}
+	
 
 }

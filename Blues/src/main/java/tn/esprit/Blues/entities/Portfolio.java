@@ -16,7 +16,7 @@ public class Portfolio implements Serializable {
 	private int id;
 	private float value;
 	private int sharesNumber;
-	private Float gain;
+	private float gain;
 
 	private List<Operation> operations;
 	private Customer customer;
@@ -29,13 +29,15 @@ public class Portfolio implements Serializable {
 	public int getId() {
 		return this.id;
 	}
-	public Float getGain() {
+	
+	public float getGain() {
 		return gain;
 	}
-	 
-	public void setGain(Float gain) {
+
+	public void setGain(float gain) {
 		this.gain = gain;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
