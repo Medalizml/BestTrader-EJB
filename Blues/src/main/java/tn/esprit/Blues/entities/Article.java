@@ -21,9 +21,19 @@ public class Article implements Serializable {
 	private String name;
 	private String picture;
 	private String topic;
+	boolean editable;
+	private boolean selected;
 	
 	private Administrator administrator;
 
+	public boolean isEditable() {
+		return editable;
+	}
+	
+	public void setEditable(boolean editable) {
+		this.editable = editable;
+	}
+	
 	public Article() {
 	}
 
@@ -101,6 +111,17 @@ public class Article implements Serializable {
 
 	public void setAdministrator(Administrator administrator) {
 		this.administrator = administrator;
+	}
+
+	public boolean isSelected() {
+		 
+		return selected;
+		
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
+		
 	}
 
 
