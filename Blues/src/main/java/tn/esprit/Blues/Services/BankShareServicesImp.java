@@ -7,12 +7,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import tn.esprit.Blues.entities.Article;
 import tn.esprit.Blues.entities.Bank;
-import tn.esprit.Blues.entities.Company;
 import tn.esprit.Blues.entities.Currency;
 import tn.esprit.Blues.entities.Currencybank;
-import tn.esprit.Blues.entities.Customer;
 import tn.esprit.Blues.entities.Share;
 
 @Stateless

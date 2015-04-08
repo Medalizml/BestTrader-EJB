@@ -1,6 +1,6 @@
 package tn.esprit.Blues.entities;
 
-import java.awt.List;
+
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
