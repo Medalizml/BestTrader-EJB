@@ -29,7 +29,7 @@ public class Customer extends User implements Serializable {
 	private String nationality;
 	private Integer phoneNumber;
 	private String address;
-	private String profilePicture;
+	
 	 
 	
 	 
@@ -83,13 +83,7 @@ public class Customer extends User implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}   
-	public String getProfilePicture() {
-		return this.profilePicture;
-	}
-
-	public void setProfilePicture(String profilePicture) {
-		this.profilePicture = profilePicture;
-	}
+	
 
 	@Override
 	public String toString() {
