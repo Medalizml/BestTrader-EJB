@@ -19,7 +19,17 @@ public class UsersServicesImpl implements UsersServices{
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Customer> findAll() {
-	Query query = manager.createQuery("SELECT u FROM Customer u ");
+		
+	Query query = manager.createQuery("SELECT u FROM Customer u WHERE u.active IS TRUE ");
+
+		return query.getResultList();
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Customer> findAllNoActif() {
+		
+	Query query = manager.createQuery("SELECT u FROM Customer u WHERE u.active IS FALSE ");
 
 		return query.getResultList();
 	}
@@ -37,6 +47,12 @@ public class UsersServicesImpl implements UsersServices{
 	@Override
 	public void update(Portfolio p) {
 		manager.merge(p);
+		
+	}
+	
+	@Override
+	public void update(Customer c) {
+		manager.merge(c);	
 		
 	}
 

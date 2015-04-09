@@ -11,8 +11,10 @@ import tn.esprit.Blues.entities.Portfolio;
 public interface UsersServices {
 	
 	public List<Customer> findAll();
+	public List<Customer> findAllNoActif();
 	public void remove(Customer c);
 	public Customer findById(int id);
 	public void update(Portfolio p);
+	public void update(Customer c);
 
 }
