@@ -29,4 +29,10 @@ public class StatServicesImpl implements StatServices {
 		return query.getResultList();
 	}
 
+	@Override
+	public List<Customer> getOrderedList() {
+		Query query = manager.createQuery("SELECT u FROM Customer u ORDER BY u.portfolio.gain DESC ");
+		return query.getResultList();
+	}
+
 }

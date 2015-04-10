@@ -11,6 +11,6 @@ import tn.esprit.Blues.entities.Customer;
 public interface StatServices {
 	public String getName();
 	public List<Customer> getList();
-
+	public List<Customer> getOrderedList();
 
 }
