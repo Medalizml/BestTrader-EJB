@@ -1,6 +1,6 @@
 package tn.esprit.Blues.entities;
 
-import java.awt.List;
+
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
@@ -9,6 +9,8 @@ import java.lang.String;
 
 
 
+
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -30,6 +32,8 @@ public class Customer extends User implements Serializable {
 	private Integer phoneNumber;
 	private String address;
 	private String profilePicture;
+	
+	private List<Reclamation> reclamations;
 	 
 	
 	 
@@ -89,6 +93,14 @@ public class Customer extends User implements Serializable {
 
 	public void setProfilePicture(String profilePicture) {
 		this.profilePicture = profilePicture;
+	}
+@OneToMany(mappedBy="sender")
+	public List<Reclamation> getReclamations() {
+		return reclamations;
+	}
+
+	public void setReclamations(List<Reclamation> reclamations) {
+		this.reclamations = reclamations;
 	}
 
 	@Override
