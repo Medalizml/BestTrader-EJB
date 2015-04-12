@@ -29,7 +29,7 @@ public class PrivateCompanyServiceImp implements PrivateCompnayService{
 
 	@Override
 	public void remove(Company a) {
-		manager.remove(a);
+		manager.remove(findById(a.getId()));
 		
 	}
 
@@ -84,6 +84,12 @@ public class PrivateCompanyServiceImp implements PrivateCompnayService{
 	public List<Currencybank> findBybank(int id) {
 		Query query = manager.createQuery("SELECT c FROM Currencybank c WHERE c.bank.id = '"+id+"'");
 		return query.getResultList();
+	}
+
+	@Override
+	public Sector findSectorByName(String name) {
+		Query query = manager.createQuery("SELECT s FROM Sector s WHERE s.name = '"+name+"'");
+		return (Sector) query.getSingleResult();
 	}
 
 }
