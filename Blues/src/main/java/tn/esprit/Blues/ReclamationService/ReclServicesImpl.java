@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import tn.esprit.Blues.entities.Customer;
 import tn.esprit.Blues.entities.Reclamation;
 
 
@@ -23,5 +24,13 @@ public class ReclServicesImpl implements ReclServices {
 		return query.getResultList();
 	}
 
-	
+	@Override
+	public void remove(Reclamation r) {
+		manager.remove(findById(r.getId()));	
+		}
+	@Override
+	public Reclamation findById(int id) {
+	return manager.find(Reclamation.class,id);
+		
+	}
 }

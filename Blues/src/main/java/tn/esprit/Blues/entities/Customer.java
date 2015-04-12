@@ -31,9 +31,13 @@ public class Customer extends User implements Serializable {
 	private String nationality;
 	private Integer phoneNumber;
 	private String address;
-	private String profilePicture;
 	
 	private List<Reclamation> reclamations;
+
+	private Integer age;
+	private boolean active;
+	
+
 	 
 	
 	 
@@ -58,7 +62,24 @@ public class Customer extends User implements Serializable {
 
 	public Customer() {
 		super();
-	}   
+	}
+	
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
 	public String getJob() {
 		return this.job;
 	}
@@ -87,13 +108,7 @@ public class Customer extends User implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}   
-	public String getProfilePicture() {
-		return this.profilePicture;
-	}
 
-	public void setProfilePicture(String profilePicture) {
-		this.profilePicture = profilePicture;
-	}
 @OneToMany(mappedBy="sender")
 	public List<Reclamation> getReclamations() {
 		return reclamations;
@@ -102,6 +117,7 @@ public class Customer extends User implements Serializable {
 	public void setReclamations(List<Reclamation> reclamations) {
 		this.reclamations = reclamations;
 	}
+
 
 	@Override
 	public String toString() {
