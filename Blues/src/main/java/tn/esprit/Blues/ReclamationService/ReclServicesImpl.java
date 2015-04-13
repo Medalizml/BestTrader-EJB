@@ -33,4 +33,12 @@ public class ReclServicesImpl implements ReclServices {
 	return manager.find(Reclamation.class,id);
 		
 	}
+
+	@Override
+	public long numberRec() {
+		Query query = manager.createQuery("SELECT COUNT(c) FROM Reclamation c");
+		
+		long count =  (long) query.getSingleResult() ;
+		return count;
+	}
 }
