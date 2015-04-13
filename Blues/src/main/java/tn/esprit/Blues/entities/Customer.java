@@ -1,6 +1,6 @@
 package tn.esprit.Blues.entities;
 
-import java.awt.List;
+
 import java.io.Serializable;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,6 +29,8 @@ public class Customer extends User implements Serializable {
 	private String nationality;
 	private Integer phoneNumber;
 	private String address;
+	private Integer age;
+	private boolean active;
 	
 	 
 	
@@ -54,7 +56,24 @@ public class Customer extends User implements Serializable {
 
 	public Customer() {
 		super();
-	}   
+	}
+	
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
 	public String getJob() {
 		return this.job;
 	}
