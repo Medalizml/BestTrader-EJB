@@ -109,7 +109,7 @@ public class Customer extends User implements Serializable {
 		this.address = address;
 	}   
 
-@OneToMany(mappedBy="sender")
+@OneToMany(mappedBy="sender",cascade=CascadeType.REMOVE)
 	public List<Reclamation> getReclamations() {
 		return reclamations;
 	}
