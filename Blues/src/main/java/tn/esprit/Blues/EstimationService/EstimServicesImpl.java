@@ -18,7 +18,7 @@ public class EstimServicesImpl implements EstimServices{
 	EntityManager manager;
 
 	public List<Company> findAll() {
-		Query query = manager.createQuery("SELECT c FROM Company c");
+		Query query = manager.createQuery("SELECT c FROM Company c ORDER BY c.quotation.closingPrice DESC");
 		return query.getResultList();
 		
 	}

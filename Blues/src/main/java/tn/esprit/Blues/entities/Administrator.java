@@ -19,6 +19,8 @@ public class Administrator extends User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private List<Article> articles;
+	private List<Reclamation> reclamations;
+	
 	
 	
 @OneToMany(mappedBy="administrator")
@@ -36,6 +38,18 @@ public class Administrator extends User implements Serializable {
 
 	public Administrator() {
 		super();
+	}
+
+
+@OneToMany(mappedBy="reciver")
+	public List<Reclamation> getReclamations() {
+		return reclamations;
+	}
+
+
+
+	public void setReclamations(List<Reclamation> reclamations) {
+		this.reclamations = reclamations;
 	}
    
 }
