@@ -6,6 +6,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import tn.esprit.Blues.entities.Administrator;
+import tn.esprit.Blues.entities.Customer;
+import tn.esprit.Blues.entities.User;
 
 @Stateless
 public class AuthentificationService implements AuthentificationServiceI {
@@ -13,10 +15,10 @@ public class AuthentificationService implements AuthentificationServiceI {
 	EntityManager em;
 
 	@Override
-	public Administrator authentificate(String email, String password) {
-		String query = String.format("select u from Administrator u where u.email = '%s' and u.password = '%s'", email, password);
+	public User authentificate(String email, String password) {
+		String query = String.format("select u from User u where u.email = '%s' and u.password = '%s'", email, password);
 		System.out.println("B");
-		Administrator admins = (Administrator) em.createQuery(query).getSingleResult();
+		User admins =(User)em.createQuery(query).getSingleResult();
 		return admins;
 	}
 
