@@ -18,6 +18,7 @@
 		<class>tn.esprit.Blues.entities.Portfolio</class>
 		<class>tn.esprit.Blues.entities.Pricehistory</class>
 		<class>tn.esprit.Blues.entities.Quotation</class>
+		<class>tn.esprit.Blues.entities.Reclamation</class>
 		<class>tn.esprit.Blues.entities.Sector</class>
 		<class>tn.esprit.Blues.entities.User</class>
 		<properties>

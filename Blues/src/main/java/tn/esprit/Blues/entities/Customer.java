@@ -10,6 +10,8 @@ import java.lang.String;
 
 
 
+import java.util.List;
+
 import javax.persistence.*;
 
 import tn.esprit.Blues.entities.User;
@@ -29,9 +31,13 @@ public class Customer extends User implements Serializable {
 	private String nationality;
 	private Integer phoneNumber;
 	private String address;
+	
+	private List<Reclamation> reclamations;
+
 	private Integer age;
 	private boolean active;
 	
+
 	 
 	
 	 
@@ -102,7 +108,16 @@ public class Customer extends User implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}   
-	
+
+@OneToMany(mappedBy="sender")
+	public List<Reclamation> getReclamations() {
+		return reclamations;
+	}
+
+	public void setReclamations(List<Reclamation> reclamations) {
+		this.reclamations = reclamations;
+	}
+
 
 	@Override
 	public String toString() {
