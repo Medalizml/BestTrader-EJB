@@ -3,7 +3,6 @@
 	<persistence-unit name="Blues">
 
 	<jta-data-source>java:jboss/datasources/bestTraderDS</jta-data-source>
-
 		<class>tn.esprit.Blues.entities.Customer</class>
 		<class>tn.esprit.Blues.entities.Administrator</class>
 		<class>tn.esprit.Blues.entities.Bond</class>
@@ -20,6 +19,7 @@
 		<class>tn.esprit.Blues.entities.Portfolio</class>
 		<class>tn.esprit.Blues.entities.Pricehistory</class>
 		<class>tn.esprit.Blues.entities.Quotation</class>
+		<class>tn.esprit.Blues.entities.Reclamation</class>
 		<class>tn.esprit.Blues.entities.Sector</class>
 		<class>tn.esprit.Blues.entities.User</class>
 		<properties>

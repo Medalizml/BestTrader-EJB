@@ -24,4 +24,5 @@ public interface PrivateCompnayService {
 	public List<Sector> findAllSector();
 	public void addBond(Bond b);
 	public List<Currencybank>findBybank(int id);
+	public Sector findSectorByName(String name);
 }
