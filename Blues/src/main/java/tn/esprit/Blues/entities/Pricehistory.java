@@ -12,7 +12,10 @@ import java.util.Date;
 public class Pricehistory implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
-	private int price;
+	private float closingPrice;
+	private float highestPrice;
+	private float lowestPrice;
+	private float opningPrice;
 	private Date time;
 
 	private Quotation quotation;
@@ -28,14 +31,6 @@ public class Pricehistory implements Serializable {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public int getPrice() {
-		return this.price;
-	}
-
-	public void setPrice(int price) {
-		this.price = price;
 	}
 
 	@Temporal(TemporalType.DATE)
@@ -58,7 +53,39 @@ public class Pricehistory implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Pricehistory [id=" + id + ", price=" + price + "]";
+		return "Pricehistory [id=" + id + ", price="  + "]";
+	}
+
+	public float getClosingPrice() {
+		return closingPrice;
+	}
+
+	public void setClosingPrice(float closingPrice) {
+		this.closingPrice = closingPrice;
+	}
+
+	public float getHighestPrice() {
+		return highestPrice;
+	}
+
+	public void setHighestPrice(float highestPrice) {
+		this.highestPrice = highestPrice;
+	}
+
+	public float getLowestPrice() {
+		return lowestPrice;
+	}
+
+	public void setLowestPrice(float lowestPrice) {
+		this.lowestPrice = lowestPrice;
+	}
+
+	public float getOpningPrice() {
+		return opningPrice;
+	}
+
+	public void setOpningPrice(float opningPrice) {
+		this.opningPrice = opningPrice;
 	}
 	
 }
