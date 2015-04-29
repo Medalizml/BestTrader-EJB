@@ -13,5 +13,6 @@ public interface CompanyServices {
 	public Company findById(int id);
 	public void update(Company c);
 	public List<Company> findAll();
+	public Company findCompanyByName(String name);
 
 }

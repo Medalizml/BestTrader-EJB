@@ -41,4 +41,10 @@ public class CompanyServicesImpl implements CompanyServices {
 		Query query = manager.createQuery("SELECT c FROM Company c ");
 		return query.getResultList();
 	}
+
+	@Override
+	public Company findCompanyByName(String name) {
+		Query query = manager.createQuery("SELECT c FROM Company c WHERE c.name = '"+name+"'");
+		return (Company) query.getSingleResult();
+	}
 }

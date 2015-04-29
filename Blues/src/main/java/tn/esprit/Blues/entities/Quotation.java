@@ -23,6 +23,15 @@ public class Quotation implements Serializable {
 	private float lowestPrice;
 	private float opningPrice;
 	private float estimation;
+	private float volume;
+
+	public float getVolume() {
+		return volume;
+	}
+
+	public void setVolume(float volume) {
+		this.volume = volume;
+	}
 
 	private List<Operation> operations;
 	

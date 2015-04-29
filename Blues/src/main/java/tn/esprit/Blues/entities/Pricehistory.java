@@ -17,6 +17,16 @@ public class Pricehistory implements Serializable {
 	private float lowestPrice;
 	private float opningPrice;
 	private Date time;
+	private float volume;
+	
+	
+	public float getVolume() {
+		return volume;
+	}
+
+	public void setVolume(float volume) {
+		this.volume = volume;
+	}
 
 	private Quotation quotation;
 
