@@ -11,4 +11,5 @@ public interface ReclServices {
 	public List<Reclamation> findAll();
 	public void remove(Reclamation r);
 	public Reclamation findById(int id);
+	public long numberRec();
 }
