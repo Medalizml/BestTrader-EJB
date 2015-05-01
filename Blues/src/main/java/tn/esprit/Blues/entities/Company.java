@@ -133,7 +133,7 @@ public class Company implements Serializable {
 		this.sector = sector;
 	}
 
-	@OneToOne(mappedBy = "company",cascade=CascadeType.REMOVE)
+	@OneToOne(mappedBy = "company",cascade=CascadeType.ALL)
 	public Quotation getQuotation() {
 		return this.quotation;
 	}
