@@ -11,9 +11,9 @@ import tn.esprit.Blues.entities.Pricehistory;
 @Local
 public interface ParserServices {
 	
-	public List<Company> findCompany();
-	public Company findById(int id);
-	public void update(Company s,Pricehistory pricehistory);
-	public String readhtml();
+//	public List<Company> findCompany();
+//	public Company findById(int id);
+//	public void update(Company s,Pricehistory pricehistory);
+//	public String readhtml();
 
 }
