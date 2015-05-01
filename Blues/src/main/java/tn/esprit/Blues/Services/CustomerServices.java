@@ -21,6 +21,7 @@ public interface CustomerServices {
 	public Customer findById(int id);
 	public void update(Customer c);
 	public List<Customer> findAll();
+	public List<Integer> findAllID();
 
 
 	
