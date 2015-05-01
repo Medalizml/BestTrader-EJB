@@ -42,4 +42,14 @@ public class ProfileServicesImpl implements ProfileServices {
 		manager.persist(operation);
 		
 	}
+
+	@Override
+	public List<Operation> getMyOperations(Integer id) {
+		TypedQuery<Operation> query = manager
+				.createQuery(
+						"select  p from Operation p where p.portfolio.id=:id ",
+						Operation.class);
+		query.setParameter("id", id);
+		return query.getResultList();
+	}
 }
