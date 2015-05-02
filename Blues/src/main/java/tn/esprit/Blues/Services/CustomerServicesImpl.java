@@ -51,6 +51,14 @@ Query query = manager.createQuery("SELECT u FROM Customer u ");
 	return query.getResultList();
 }
 
+@Override
+public List<Integer> findAllID() {
+	Query query = manager.createQuery("SELECT u.id FROM Customer u ");
+
+	return query.getResultList();
+	
+}
+
 
 
 
