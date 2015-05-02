@@ -56,4 +56,9 @@ public class UsersServicesImpl implements UsersServices{
 		
 	}
 
+	@Override
+	public void add(Customer c) {
+		manager.persist(c);
+	}
+
 }
