@@ -20,5 +20,6 @@ public interface ScreenersServices {
 	public List<Float> findAllClosePrice(int id);
 	public List<Float> findAllLowPrice(int id);
 	public List<Float> findAllHighPrice(int id);
+	public List<Float> findAllVolume(int id);
 
 }
