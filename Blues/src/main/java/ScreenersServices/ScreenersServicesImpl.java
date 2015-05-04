@@ -28,7 +28,7 @@ public class ScreenersServicesImpl implements ScreenersServices{
 	public List<Date> findAllDate(int id) {
 		TypedQuery<Date> query = manager
 				.createQuery(
-						"select p.time from Pricehistory p where p.quotation.id=:id ",
+						"select p.time from Pricehistory p where p.quotation.id=:id  ",
 						Date.class);
 		query.setParameter("id",id);
 		return query.getResultList();
@@ -62,7 +62,7 @@ public class ScreenersServicesImpl implements ScreenersServices{
 	public List<Float> findAllPrice(int id) {
 		TypedQuery<Float> query = manager
 				.createQuery(
-						"select p.opningPrice from Pricehistory p where p.quotation.id=:id ",
+						"select p.opningPrice from Pricehistory p  where p.quotation.id=:id ",
 						Float.class);
 		query.setParameter("id",id);
 		return query.getResultList();
@@ -96,6 +96,17 @@ public class ScreenersServicesImpl implements ScreenersServices{
 		TypedQuery<Float> query = manager
 				.createQuery(
 						"select p.highestPrice from Pricehistory p where p.quotation.id=:id ",
+						Float.class);
+		query.setParameter("id",id);
+		return query.getResultList();
+
+	}
+	
+	@Override
+	public List<Float> findAllVolume(int id) {
+		TypedQuery<Float> query = manager
+				.createQuery(
+						"select p.volume from Pricehistory p where p.quotation.id=:id ",
 						Float.class);
 		query.setParameter("id",id);
 		return query.getResultList();

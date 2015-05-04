@@ -19,5 +19,6 @@ public interface homeServices {
 	public List<Company> findPrivateCompanies();
 	public List<Company> findPublicCompanies();
 	public List<Company> findBanks();
+	public List<Article> SearchArticle(String string);
 
 }

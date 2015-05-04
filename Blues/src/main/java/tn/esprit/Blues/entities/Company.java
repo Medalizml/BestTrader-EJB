@@ -26,6 +26,7 @@ public class Company implements Serializable {
 	private int quotedShares;
 	private float socialCapital;
 	private float socialShare;
+	public boolean selected;
 
 	private Sector sector;
 	private Quotation quotation;
@@ -140,6 +141,14 @@ public class Company implements Serializable {
 
 	public void setQuotation(Quotation quotation) {
 		this.quotation = quotation;
+	}
+
+	public boolean isSelected() {
+		return selected;
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
 	}
 	
 	
