@@ -9,12 +9,9 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import tn.esprit.Blues.entities.Bank;
-import tn.esprit.Blues.entities.Bond;
-import tn.esprit.Blues.entities.Company;
 import tn.esprit.Blues.entities.Currency;
 import tn.esprit.Blues.entities.Currencybank;
 import tn.esprit.Blues.entities.Quotation;
-import tn.esprit.Blues.entities.Sector;
 import tn.esprit.Blues.entities.Share;
 
 @Stateless
