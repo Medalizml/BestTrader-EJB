@@ -51,7 +51,7 @@ public class Customer extends User implements Serializable {
 	private Portfolio portfolio;
 	
 
-		@OneToOne(mappedBy="customer",cascade=CascadeType.REMOVE)
+		@OneToOne(mappedBy="customer",cascade=CascadeType.ALL)
 		public Portfolio getPortfolio() {
 			return this.portfolio;
 		}
