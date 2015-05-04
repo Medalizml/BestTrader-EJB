@@ -16,7 +16,7 @@ public interface PrivateCompnayService {
 	public void add(Company c,Quotation q);
 	public void remove(Company a);
 	public Company findById(int id);
-	public void update(Company a,Share s);
+	public void update(Company a,Quotation quotation);
 	public void updatePublic(Company c,Bond b);
 	
 	public List<Company>  findAllPublic();

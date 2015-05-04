@@ -40,7 +40,7 @@ public class PrivateCompanyServiceImp implements PrivateCompnayService{
 	}
 
 	@Override
-	public void update(Company c,Share s) {
+	public void update(Company c,Quotation s) {
 		// TODO Auto-generated method stub
 		manager.merge(c);
 		manager.merge(s);

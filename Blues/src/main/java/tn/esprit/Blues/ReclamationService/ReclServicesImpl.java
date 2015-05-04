@@ -19,8 +19,9 @@ public class ReclServicesImpl implements ReclServices {
 
 	
 	@Override
-	public List<Reclamation> findAll() {
-		Query query = manager.createQuery("SELECT c FROM Reclamation c");
+	public List<Reclamation> findAll(Customer customer) {
+		Query query = manager.createQuery("SELECT c FROM Reclamation c where c.sender=:customer");
+		query.setParameter("customer", customer);
 		return query.getResultList();
 	}
 
@@ -40,5 +41,18 @@ public class ReclServicesImpl implements ReclServices {
 		
 		long count =  (long) query.getSingleResult() ;
 		return count;
+	}
+
+	@Override
+	public void addReclamation(Reclamation r) {
+
+		manager.persist(r);
+	}
+
+	@Override
+	public List<Reclamation> findAll() {
+		Query query = manager.createQuery("SELECT c FROM Reclamation c");
+		
+		return query.getResultList();
 	}
 }
