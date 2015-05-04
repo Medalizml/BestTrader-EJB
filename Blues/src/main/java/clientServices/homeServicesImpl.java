@@ -102,4 +102,11 @@ public class homeServicesImpl implements homeServices{
 
 		return query.getResultList();
 	}
+
+	@Override
+	public List<Article> SearchArticle(String string) {
+		Query query =manager.createQuery("Select a from Article a where a.name LIKE 'string%'");
+		query.setParameter("string", string);
+		return query.getResultList();
+	}
 }
