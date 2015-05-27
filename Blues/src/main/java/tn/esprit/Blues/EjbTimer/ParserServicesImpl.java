@@ -293,16 +293,16 @@ public class ParserServicesImpl implements ParserServices {
 				}
 			}
 
-			CompanyName.remove(76);
-			OpeningPrice.remove(76);
-			ClosingPrice.remove(76);
-			LowestPrice.remove(76);
-			HighestPrice.remove(76);
-			OpeningPriceF.remove(76);
-			ClosingPriceF.remove(76);
-			LowestPriceF.remove(76);
-			HighestPriceF.remove(76);
-			VolumeF.remove(76);
+//			CompanyName.remove(76);
+//			OpeningPrice.remove(76);
+//			ClosingPrice.remove(76);
+//			LowestPrice.remove(76);
+//			HighestPrice.remove(76);
+//			OpeningPriceF.remove(76);
+//			ClosingPriceF.remove(76);
+//			LowestPriceF.remove(76);
+//			HighestPriceF.remove(76);
+//			VolumeF.remove(76);
 
 			List<Company> companies = findCompany();
 			Share share = new Share();
@@ -332,7 +332,7 @@ public class ParserServicesImpl implements ParserServices {
 						pricehistory.setTime(new Date());
 						//c.setQuotation(share);
 						try {
-							 update(c,pricehistory);
+							// update(c,pricehistory);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
