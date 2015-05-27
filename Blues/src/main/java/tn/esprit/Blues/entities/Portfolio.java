@@ -58,7 +58,7 @@ public class Portfolio implements Serializable {
 		this.sharesNumber = sharesNumber;
 	}
 
-	@OneToMany(mappedBy = "portfolio")
+	@OneToMany(mappedBy = "portfolio",cascade=CascadeType.REMOVE)
 	public List<Operation> getOperations() {
 		return this.operations;
 	}
