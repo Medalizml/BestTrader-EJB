@@ -21,7 +21,7 @@ public class Bank extends Company implements Serializable {
 	private List<Currencybank> currencybanks;
 	
 	
-@OneToMany(mappedBy="bank",cascade=CascadeType.REMOVE)
+@OneToMany(mappedBy="bank",cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 
 	public List<Currencybank> getCurrencybanks() {
 		return currencybanks;

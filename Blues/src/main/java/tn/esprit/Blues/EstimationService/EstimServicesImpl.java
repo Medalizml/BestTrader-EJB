@@ -9,7 +9,6 @@ import javax.persistence.Query;
 
 import tn.esprit.Blues.entities.Company;
 import tn.esprit.Blues.entities.Quotation;
-import tn.esprit.Blues.entities.Share;
 
 @Stateless
 public class EstimServicesImpl implements EstimServices{
