@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import tn.esprit.Blues.entities.Company;
 import tn.esprit.Blues.entities.Customer;
 
 @Stateless
@@ -33,6 +34,11 @@ public class StatServicesImpl implements StatServices {
 	public List<Customer> getOrderedList() {
 		Query query = manager.createQuery("SELECT u FROM Customer u ORDER BY u.portfolio.gain DESC ");
 		return query.getResultList();
+	}
+	
+	@Override
+	public Company findById(int id) {
+		return manager.find(Company.class, id);
 	}
 
 }

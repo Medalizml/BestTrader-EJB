@@ -351,8 +351,11 @@ public class ParserServicesImpl implements ParserServices {
 	@PostConstruct
 	@Schedule(year = "*", dayOfWeek = "*", hour = "*", minute = "*/20", persistent = false)
 	public void init() {
-
 		readhtml();
+		
+//		EstimationCalculator calc = new EstimationCalculator();
+//		calc.setEstimation();
+//		System.out.println("icccccccccccccccccccccccccciciiiiiiiiiiii   "+calc.getEstimation());
 	}
 
 	public List<Float> getVolumeF() {
