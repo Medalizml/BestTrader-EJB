@@ -336,14 +336,14 @@ public class ParserServicesImpl implements ParserServices {
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
-						System.out.println(share.getClosingPrice());
+						//System.out.println(c.getQuotation().getClosingPrice());
 					}
 				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		System.out.println(ClosingPriceF);
 		return "see you in 15 minutes";
 
 	}
@@ -352,10 +352,6 @@ public class ParserServicesImpl implements ParserServices {
 	@Schedule(year = "*", dayOfWeek = "*", hour = "*", minute = "*/20", persistent = false)
 	public void init() {
 		readhtml();
-		
-//		EstimationCalculator calc = new EstimationCalculator();
-//		calc.setEstimation();
-//		System.out.println("icccccccccccccccccccccccccciciiiiiiiiiiii   "+calc.getEstimation());
 	}
 
 	public List<Float> getVolumeF() {

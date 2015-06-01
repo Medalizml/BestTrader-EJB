@@ -6,7 +6,7 @@
 
 
 
-	<jta-data-source>java:jboss/datasources/bestTrader1DS</jta-data-source>
+	<jta-data-source>java:jboss/datasources/bestTraderDS</jta-data-source>
 
 
 		<class>tn.esprit.Blues.entities.Customer</class>
